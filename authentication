@@ -269,3 +269,5 @@ colorScheme = 'cool';
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
+<ngx-qrcode [value]="value"></ngx-qrcode>
+  value="7038396335@ybl"
