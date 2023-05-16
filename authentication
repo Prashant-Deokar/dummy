@@ -115,3 +115,157 @@ private stopCamera() {
     }
 
     console.log(bytes);
+
+<ngx-charts-line-chart
+[view]="[900, 400]"
+[scheme]="colorScheme"
+[results]="chartData"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[legend]="showLegend"
+[legendTitle]="'Appointments'"
+[showXAxisLabel]="showXAxisLabel"
+[showYAxisLabel]="showYAxisLabel"
+[xAxisLabel]="'Month'"
+[yAxisLabel]="'Number of Appointments'">
+
+</ngx-charts-line-chart>
+
+colorScheme = 'cool';
+  showXAxis = true;
+  showYAxis = true;
+  showLegend = true;
+  showXAxisLabel = true;
+  showYAxisLabel = true;
+
+
+  chartData = [
+    {
+      name: 'Appointment 2022',
+      series: [
+        {
+          name: 'January',
+          value: 90
+        },
+        {
+          name: 'February',
+          value: 5000
+        },
+        {
+          name: 'March',
+          value: 250
+        },
+        {
+          name: 'April',
+          value: 0
+        },
+        {
+          name: 'May',
+          value: 2000
+        },
+        {
+          name: 'June',
+          value: 1
+        },
+        {
+          name: 'July',
+          value: 1000
+        },
+        {
+          name: 'August',
+          value: 300
+        },
+        {
+          name: 'September',
+          value: 800
+        },
+        {
+          name: 'October',
+          value: 1800
+        },
+        {
+          name: 'November',
+          value: 150
+        },
+        {
+          name: 'December',
+          value: 200
+        }
+      ]
+    },
+    {
+      name: 'Appointment 2023',
+      series: [
+        {
+          name: 'January',
+          value: 3000
+        },
+        {
+          name: 'February',
+          value: 7500
+        },
+        {
+          name: 'March',
+          value: 9500
+        },
+        {
+          name: 'April',
+          value: 6500
+        },
+        {
+          name: 'May',
+          value: 8500
+        },
+        {
+          name: 'June',
+          value: 0
+        },
+        {
+          name: 'July',
+          value: 0
+        },
+        {
+          name: 'August',
+          value: 0
+        },
+        {
+          name: 'September',
+          value: 0
+        },
+        {
+          name: 'October',
+          value: 0
+        },
+        {
+          name: 'November',
+          value: 0
+        },
+        {
+          name: 'December',
+          value: 0
+        }
+      ]
+    }
+  ];
+  
+  import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+  import { NgxChartsModule } from '@swimlane/ngx-charts';
+  
+   "@angular/animations": "^14.2.0",
+    "@angular/cdk": "^13.0.0",
+    "@angular/common": "^14.2.0",
+    "@angular/compiler": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "@angular/forms": "^14.2.0",
+    "@angular/platform-browser": "^14.2.0",
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/router": "^14.2.0",
+    "@swimlane/ngx-charts": "^20.1.2",
+    "@techiediaries/ngx-qrcode": "^9.1.0",
+    "google-auth-library": "^8.8.0",
+    "googleapis": "^118.0.0",
+    "ng-gapi": "0.0.94",
+    "ngx-qrcode2": "^9.0.0",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
