@@ -246,6 +246,10 @@ colorScheme = 'cool';
         }
       ]
     }
+    pdfmake": "^0.2.7"
+    import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+(<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
     <div class="container" style="position: relative;top: 50px;">
     <button (click)="downloadManagePDF()">downloadPDF</button>
 </div>
