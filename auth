@@ -1,0 +1,25 @@
+ng generate guard auth
+
+//service
+ private loggedIn: boolean = false;
+
+  setLoggedIn(value: boolean) {
+    this.loggedIn = value;
+  }
+
+  isLoggedIn(): boolean {
+    return this.loggedIn;
+  }
+  
+  //auth gaurd
+   canActivate(): boolean {
+    const isLoggedIn = this.authService.isLoggedIn(); // Implement a method in your AuthService to check if the user is logged in
+
+    if (isLoggedIn) {
+      return true;
+    } else {
+      this.router.navigate(['/login']); // Redirect to the login page if the user is not logged in
+      return false;
+    }
+  }
+  *ngIf="authService.isLoggedIn()"
