@@ -23,3 +23,14 @@ ng generate guard auth
     }
   }
   *ngIf="authService.isLoggedIn()"
+ { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'pdf', component: PdfComponent },
+      { path: 'qr', component: QrComponent },
+    
+    ]
+  },
+  { path: '**', redirectTo: 'login' }
